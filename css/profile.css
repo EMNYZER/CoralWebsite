@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+*{
+   font-family: 'Poppins', sans-serif;
+   margin:0; padding:0;
+   box-sizing: border-box;
+   outline: none; border:none;
+   text-decoration: none;
+   text-transform: capitalize;
+   scroll-behavior: smooth;
+}
+
+/* position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("images/bgpastel.jpg");
+  background-size: cover; */
+
+body{
+   background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+    url("images/bgpastel.jpg");
+    background-size: cover;
+   /* padding:20px; */
+   position: relative;
+}
+
+header {
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   padding: 40px 100px;
+   z-index: 10000;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   transition: 0.5s;
+}
+
+header.sticky {
+   background: #fff;
+   padding: 10px 100px;
+   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+header .logo {
+   color: #fff;
+   font-weight: 700;
+   font-size: 2em;
+   text-decoration: none;
+}
+
+header.sticky .logo {
+   color: #111;
+}
+
+header .logo span {
+   color: #e67979;
+}
+
+header.sticky .navigation .menu-nav {
+   color: #111;
+   font-weight: 600;
+}
+
+header.sticky .navigation .menu-nav a {
+   color: #111;
+   font-weight: 600;
+}
+
+header .navigation .menu-nav {
+   display: inline;
+   position: relative;
+   float: right;
+}
+
+header .navigation li {
+   list-style: none;
+   margin-left: 30px;
+}
+
+header .navigation li a {
+   text-decoration: none;
+   color: #fff;
+   font-weight: 300;
+}
+
+header .navigation .menu-nav a {
+   text-decoration: none;
+   padding: 10px 12px;
+   font-weight: 550px;
+   color: #fff;
+   transition: all .5s !important;
+}
+
+header .navigation li a:hover {
+   color: #e67979;
+}
+
+header .navigation .menu-nav a:hover, .menu-nav a.active {
+   color: #ACE7FF;
+   /* background-color: rgba(0,0,0,.8); */
+}
+
+.dropdown {
+   position: relative;
+   display: inline-block;
+}
+.dropdown:hover .column {
+   display: block;
+}
+
+.column {
+   display: none;
+   position: absolute;
+   min-width: 150px;
+   font-size: 16px;
+   top: 34px;
+   z-index: 1;
+   border-top: 1px solid #fff;
+}
+.column a {
+   padding: 12px 20px;
+   border-bottom: 1px solid rgb(197,197,250);
+   display: block;
+   transition: all .5s !important;
+}
+
+.column a:hover {
+   color: #ACE7FF;
+   
+}

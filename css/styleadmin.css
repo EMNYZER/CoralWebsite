@@ -1,0 +1,300 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  text-decoration: none;
+}
+
+.sidebar {
+  background-color: #111827;
+  margin-left: -120px;
+  width: 260px;
+  padding: 24px;
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  transition: all ease-in 0.2s;
+  text-decoration: none;
+}
+
+.sidebar.hide {
+  width: 87px;
+  transition: all ease-out 0.2s;
+}
+.main-content {
+  background-color: #c5ece3;
+  margin-right: -120px;
+  flex-grow: 1;
+}
+
+.sidebar .description-header {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  text-align: center;
+  color: aliceblue;
+  text-decoration: none;
+}
+.sidebar .description-header span{
+  text-decoration: none;
+}
+
+.sidebar.hide .description-header {
+  display: none;
+}
+
+.sidebar .a {
+  text-decoration: none;
+}
+
+.sidebar .header .list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 10px;
+  border-radius: 8px;
+  background-color: #ffcacb;
+  height: 40px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+  text-decoration: none;
+}
+
+.container .sidebar .main .list-item a{
+  text-decoration: none;
+}
+
+.container .sidebar .header .list-item a{
+  text-decoration: none;
+}
+
+.sidebar .header .list-item .icon {
+  margin-right: 12px;
+}
+
+.sidebar .header .illustration {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 10px;
+  gap: 10px;
+  margin: 10px 0px 22px 0px;
+  box-sizing: border-box;
+}
+
+.sidebar.hide .illustration {
+  display: none;
+}
+
+.sidebar .main .list-item .description-header {
+  font-family: "Ubuntu";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sidebar.hide .main .list-item .description-header {
+  display: none;
+}
+.sidebar .main .list-item .icon {
+  margin-right: 12px;
+  width: 17.92px;
+  height: 16px;
+}
+
+.sidebar .main .list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 10px;
+  /*width: 212px;*/
+  border-radius: 8px;
+  box-sizing: border-box;
+  transition: all ease-in 0.2s;
+}
+
+.sidebar .main .list-item:hover {
+  background: #ffcacb;
+  transition: all ease-in 0.2s;
+}
+
+/*MENUKONTEN*/
+#menu-button {
+  width: 32px;
+  position: absolute;
+  overflow: hidden;
+}
+
+#menu-label {
+  position: relative;
+  display: block;
+  height: 20px;
+  cursor: pointer;
+}
+
+#menu-checkbox {
+  display: none;
+}
+
+#hamburger,
+#menu-label:after,
+#menu-label:before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: black;
+}
+
+#menu-laber:after,
+#menu-label:before {
+  content: "";
+  transition: 0, 4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+#menu-label:before {
+  top: 0;
+}
+
+#menu-label:before {
+  top: 8px;
+}
+
+#hamburger {
+  top: 16px;
+}
+
+#hamburger:before {
+  content: "MENU";
+  position: absolute;
+  top: 5px;
+  right: 0;
+  left: 0;
+  color: black;
+  font-size: 10px;
+  font-weight: bold;
+  text-align: center;
+}
+
+#menu-checkbox:checked + #menu-label::before {
+  left: -39px;
+}
+
+#menu-checkbox:checked + #menu-label::afer {
+  left: 39px;
+}
+
+#menu-checkbox:checked + #menu-label #hamburger:before {
+  animation: moveUpThenDown 0.8s ease 0.2s forwards,
+    shakeUp 0.8s ease 0.2s forwards, shakedown 0.2s ease 0.8s forwards;
+}
+/* .btn btn-warning {
+  vertical-align: middle;
+} */
+
+@keyframes moveUpThenDown {
+  0% {
+    top: 0;
+  }
+  50% {
+    top: -27px;
+  }
+  100% {
+    top: -14px;
+  }
+}
+
+@keyframes shakeUp {
+  0% {
+    transform: rotateZ(0);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  50% {
+    transform: rotateZ(0);
+  }
+  75% {
+    transform: rotateZ(10deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+@keyframes shakedown {
+  0% {
+    transform: rotateZ(0);
+  }
+  80% {
+    transform: rotateZ(3deg);
+  }
+  90% {
+    transform: rotateZ(-3deg);
+  }
+  100% {
+    transform: rotateZ(0);
+  }
+}
+
+.mx-auto {
+  width: 800px;
+}
+
+.card {
+  margin-top: 60px;
+}
+.card .table .kelas{
+  vertical-align: middle;
+}
+.card .table .kelass{
+  vertical-align: middle;
+  align-items: center;
+  justify-items: center;
+}
+.table .listkelas {
+  /* text-align: center; */
+  justify-items: center;
+  align-items: center;
+  vertical-align: middle;
+}
+.box3 {
+  width: 45%;
+  height: 45%;
+  margin-right: 100px;
+  margin-top: 30px;
+  /* margin-bottom: 50px; */
+  padding: 30px;
+  border-radius: 10px;
+  position: relative;
+  background: #fff;
+}
+.box3 h1{
+  font-size: 60px;
+  text-align: center;
+}
+.btnv {
+  /* font-size: 1em; */
+  color: #111827;
+  background: #c5ece3;
+  display: inline-block;
+  padding: 10px 30px;
+  /* margin-top: 20px; */
+  border-radius: 5px;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: 0.5s;
+}
